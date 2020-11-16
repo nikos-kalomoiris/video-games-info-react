@@ -14,13 +14,13 @@ const Game = (props) => {
 }
 
 const SyledGame = styled(motion.div)`
-    min-height: 40vh;
+    height: 50vh;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     border-radius: 15px;
     overflow: hidden;
     img {
-        height: 30vh;
+        height: 40vh;
         object-fit: cover;
         width: 100%;
     }
