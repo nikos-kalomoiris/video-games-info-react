@@ -22,3 +22,4 @@ export const popularGames = `${baseurl}/games?key=${apiKey}&dates=${lastYear},${
 export const newGames = `${baseurl}/games?key=${apiKey}&dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 export const gameDetails = gameId => `${baseurl}/games/${gameId}?key=${apiKey}`;
 export const gameScreenShots = gameId => `${baseurl}/games/${gameId}/screenshots?key=${apiKey}`;
+export const gameSearch = gameName => `${baseurl}/games?search=${gameName}&page_size=10`;

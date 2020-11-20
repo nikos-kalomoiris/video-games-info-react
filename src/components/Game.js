@@ -8,18 +8,18 @@ import { resizeImage } from '../util';
 
 const Game = (props) => {
     const dispatch = useDispatch();
-
+    const stringPathId = (props.id).toString();
     const loadDetailsHandler = () => {
         document.body.style.overflow = 'hidden';
         dispatch(loadDetails(props.id));
     }
 
     return(
-        <SyledGame onClick={loadDetailsHandler}>
+        <SyledGame layoutId={stringPathId} onClick={loadDetailsHandler}>
             <Link to={`/game/${props.id}`}>
-                <h3>{props.name}</h3>
+                <motion.h3 layoutId={`title ${stringPathId}`}>{props.name}</motion.h3>
                 <p>{props.releaseDate}</p>
-                <img src={resizeImage(props.image, 640)} alt={props.name}/>
+                <motion.img layoutId={`image ${stringPathId}`} src={resizeImage(props.image, 640)} alt={props.name}/>
             </Link> 
         </SyledGame>
     
